@@ -5,15 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Position</title>
     <!-- position: static, fixed, absolute, relative -->
     <style>
         body {
             height: 300vh;
         }
 
-        div,
-        span {
+        div, span {
+            /* span po nadaniu position fixed albo absolute staje się el blokowym */
             width: 200px;
             height: 200px;
             background-color: brown;
@@ -22,41 +22,65 @@
 
         .s1 {
             position: fixed;
-            left: 200px;
-            top: 30%;
-            background-color: red;
-            z-index: 3;
+            /* wyznaczanie pozycji wzlędem okna przeglądarki. Inne elementy nie widzą już tego .s1, nie wpływa na układ */
 
+            left: 100px;
+            top: 50%;
+
+            /* od lewej krawędzi okna przegl 300px
+               od góry krawędzie okna przegl 50% */
+            background-color: red;
+
+            z-index: auto;
+            /* domyśla wartość */
+
+            /* z-index: -1; */
+            /* teraz jest pod innymi divami - kolejnośc wyświetlania, nie działa dla
+             
+            position: static;*/
         }
 
         .s2 {
             position: absolute;
-            background-color: blue;
-            bottom: 30%;
-            left: 10%;
-            z-index: 2;
+            /* fixed jest ZAWSZE pozycjonowany względem okna przeglądarki */
 
+            /* position: absolute jest domyślnie względem okna przeglądarki */
+
+            background-color: blue;
+            top: -20%;
+            left: 70%;
         }
 
         .s3 {
             position: relative;
+            /* przesówanie obiektu względem jego pozycji! Jego obecność jest ciągle widziana. Nie okna przeglądarki, nie rodzica, bez podania współrzędnych zostaje na swoim miejscu */
+
+            /* position: absolute; */
+            /* rodzic się zmniejszył, bo ten element został wyrzucony z układu, nie jest już przez niego widziany! */
+
             background-color: orange;
-            left: 40px;
-            top: 150px;
-            z-index: 1;
+            left: 300px;
+            top: 20px;
+
+            /* height: 300px; */
+            /* zmiana wysokości zmienia układ! */
         }
 
         .s4 {
             position: absolute;
             top: 50px;
             left: 50px;
-            z-index: 0;
+            background-color: #fff;
         }
 
         section {
-            background-color: beige;
             position: relative;
+            /* przy aktywnej właściwości pos rel dla section element .s2 z position: absolute jest pozycjonowany względem section! */
+
+            background-color: grey;
+
             /* overflow: hidden; */
+            /* ukryj wszystko co wychodzi poza mnie! Poza elementami fixed! */
         }
     </style>
 </head>
@@ -67,7 +91,8 @@
             tenetur temporibus odio, optio quaerat nam quisquam consequuntur, cum assumenda voluptatum provident commodi.</p>
     </header>
     <section>
-        <div class="s1"></div>
+        <span class="s1"></span>
+        <!-- element liniowy! SPAN w CSS width i height na niego nie działa! Po nadaniu posiiton fixed albo absolute - ten element staje się blokowy!  -->
         <div class="s2"></div>
         <div class="s3"></div>
         <div class="s4"></div>

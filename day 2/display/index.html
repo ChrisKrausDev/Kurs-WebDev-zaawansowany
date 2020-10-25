@@ -7,31 +7,105 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        * {
-            margin: 0;
-            border: 0;
+
+        body {
+            text-align: center;
+            /* tu następuje wyśrodkowanie elementów */
+        }
+        div {
+            font-size: 10px;
+            width: 50%;
+            /* height: 800px; */
+            background-color: #ddd;
         }
 
+        span{
+            background-color: #fff;
 
+            margin: 20px;
+            padding: 20px;
+            border: 20px solid green;
+            /* możliwość ustawienia paddingu (gdlr) i marginesu (lr) */
 
-        nav {
-            font-size: 0;
+            width: 1300px;
+            width: 300px;
+            /* dla el liniowego span obie powyższe właściwości są ustawionone domyslnie na auto! nie ma możliwości tego zmienić */
+        }
+
+        img{
+            display: block;
+            /* wyświetlany jest już jako element blokowy, reszta elementów wchodzi od prawej strony w tej samej linii 
+            
+            dodatkowo, nie działa wyśrodkowanie dziedziczone po rodzicu! (body) nalezy wtedy nadać margin: 0 auto;*/
+
+            margin: 0 auto;
+
+            width: 30%;
+            /* height: 200px; */
+            /* tyle zadeklarowane przestrzeni dla obrazka! zmienia jego proporcje! Jeśli ustawimy tylko width albo tylko height zostaną zachowane proporcje */
+
+            text-align: center;
+            /* nie ma jak wyśrodkować, wyśrodkowanie należy dokonać na rodziacach! patrzy body{} */
+        }
+
+        a {
+            /* display: block; */
+            /* blokowość wymusza na elemencie nową linię!  */
+
+            display: inline-block;
+            /* ma domyślnie tyle ile potrzebuje i pojawiają się obok siebie, oraz można okreslac width i height */
+
+            /* float: left; */
+            /* mała uwaga, tu stają się blokowo, i ma taki rozmiar jak potrzebuje */
+            
+            padding: 20px;
+            width: 200px;
+            background-color: grey;
+            font-size: 40px;
         }
 
         button {
-            font-size: 20px;
-            width: 25%;
+            display: inline-block;
+            /* domyślnie dla button, można ustalić widht i height */
+
+            /* display: block; */
+            /* pojawiają się pod sobą, wymusza zmianę linii */
+
+            width: 40%;
+            height: 10vh;
+        }
+
+        input {
+            display: inline-block;
+            /* są rówineż inline block */
+
+            /* width: 400px; */
+            padding: 20px;
+        }
+
+        input:focus {
+            border: 6px solid red;
+            font-size: 40px;
         }
     </style>
 </head>
 
 <body>
-    <nav>
-        <button>Przycisk-1</button>
-        <button>Przycisk-2</button>
-        <button>Przycisk-3</button>
-        <button>Przycisk-4</button>
-    </nav>
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo delectus iure perferendis sapiente odit ipsum earum aliquam. <span>Span - element liniowy</span> Tempora possimus iure inventore, ipsum itaque unde
+            natus accusamus sunt ab fugiat nisi sapiente nobis eaque, accusantium odit nam libero vero ducimus et rerum nostrum repellat? Repellat voluptas iste quisquam error ad nostrum sunt nesciunt commodi, odit, corrupti sed modi, sit laborum necessitatibus?
+    </div>
+    <img src="obrazek.jpg" alt="">
+
+    <br>
+    <a href="">Link1</a>
+    <a href="">Link2</a>
+    <br>
+
+    <button>Przycisk-1</button>
+    <button>Przycisk-2</button>
+    <input type="text" placeholder="imię">
+    <input type="text" placeholder="nazwisko">
 </body>
 
 </html>
