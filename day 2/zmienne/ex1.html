@@ -15,16 +15,17 @@
         html {
             --divNumber: 8;
             --divHeight: calc(100vh/var(--divNumber));
+            /* wysokość diva: 100vh / ilość divów */
             --oddBgc: rgb(20, 20, 180);
             --evenBgc: rgb(180, 60, 20);
             --fontSizeDiv: 20px;
-            /* --width1: 10px;
-            --width2: 200px; */
+            --width1: 100px;
+            --width2: 200px;
         }
 
         div {
-            height: var(--divHeight);
-            /* height: calc(var(--width1) + var(--width2)); */
+            /* height: var(--divHeight); */
+            height: calc(var(--width1) + var(--width2));
             background-color: var(--oddBgc)
         }
 
