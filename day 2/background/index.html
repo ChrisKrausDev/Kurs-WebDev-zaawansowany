@@ -13,29 +13,85 @@
         }
 
         div {
-            margin: 150px 30px;
-            width: 50%;
+            margin: 50px 30px;
+            width: 80%;
             height: 30vh;
-            border: 40px dotted rgba(0, 0, 0, 1);
+            border: 40px dotted rgba(255, 0, 255, 0.5);
             font-size: 40px;
-            color: red;
+            background-color: rgba(0, 0, 0, 0.5);
+            /* opacity: 0.7; */
+            /* opacity dotyczy każdego elementu! Zły efekt, chyba że chcemy, generaline lepiej używać funkcji rgba */
+            /* background-image: url(bg2.JPG), url(bg1.JPG), url(bg_big.jpg); */
+            
             padding: 30px;
-            /* opacity: .1; */
-            background-color: rgba(0, 0, 0, .4);
-            /* background-image: url(bg2.jpg), url(bg1.jpg), url(bg_big.jpg); */
-            background-image: url(bg2.jpg);
+
+            background-image: url(bg2.JPG);
+            /* background-repeat: no-repeat, repeat-x; */
+            
             background-repeat: no-repeat;
-            /* background-position-x: 0;
-            background-position-y: 0; */
-            /* background-position: center; */
-            /* background-size: 100% auto; */
+            /* background-position: 20px 20px; */
+            /* background-position: right bottom; */
+            
+            /* background-position: center center; */
+            /* wyśrodkowanie */
+            
+            /* background-position: 50% 50%; */
+            /* wyśrodkowanie */
+            
+            /* background-position: top; */
+            /* jeśli nie użyjemy drugiej właściwości, to domyślnie zostanie nadpisana 'center' */
+            
+            /* background-size: auto auto; */
+            /* domyślnie */
+
+            /* background-size: 300px auto; */
+            /* jedna wartość i druga auto by zachować proporcje */
+
+            /* background-size: 100%; */
+            /* zajmuje 100% szerokości elementu, druga wartość jest na auto */
+
+            /* background-position: left; */
+            /* tu ustalamy najważniejszy fragment zdjęcia (center - środek) */
+            
             /* background-size: cover; */
+            /* zajmij całe tło, nie rozciągaj, utnij jak najmniej */
+
+            /* background-size: contain; */
+            /* cała nasza grafika musi się znajeźć w elemencie (pozostawia czasem pasy!) */
+
+            /* background-attachment: fixed; */
+            /* przyklejony */
+
             /* background-attachment: scroll; */
+            /* scrolluje się razem ze stroną */
+
             background-origin: padding-box;
+            /* domyślnie */
+            /* rysuj zdjęcie od paddingu */
+
+            background-origin: border-box;
+            /* rysuje się pod borderem */
+
+            background-origin: content-box;
+            /* rysuje w samym contencie */
+
             background-clip: border-box;
+            /* domyślnie */
+            /* tło jest pod borderem */
+
+            background-clip: padding-box;
+            /* nie ma tła pod borderem, zaczyna się od paddingu */
+
+            /* background-clip: content-box; */
+            /* tłu zaczyna się od granicy paddingu i jest tylko w contencie */
+
+            background-image: linear-gradient(white 50%, red 100%);
+            /* zachowuje się jak grafika, poniżej stworzyliśmy teksturę */
+
             background-size: 20px 20px;
             background-repeat: repeat;
-            background-image: linear-gradient(45deg, red, white 50%, red 100%)
+            background-image: linear-gradient(90deg,white 50%, red 100%);
+            /* odwrócenie o 90 st */
         }
     </style>
 </head>

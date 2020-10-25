@@ -7,33 +7,51 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>BoxModel i BoxSizing</title>
     <style>
-        * {
+        /* * {
             box-sizing: border-box;
-        }
+        } */
 
         div {
-            width: 400px;
-            /* height: 400px; */
-            padding: 100px;
-            border: 40px solid red;
+            width: 200px;
+
+            height: 200px;
+            /* bez określenia wysokości, tekst 
+            rozciągnie element */
+            
+            padding: 50px;
+            border: 20px solid red;
+
+            margin: 50px;
+            /* na osi y margin się nie sumuje, na osi x tak */
+
             float: left;
+            overflow: hidden;
+            /* chowanie tekstu wychodzącego poza content */
 
         }
 
         .item1 {
             background-color: cadetblue;
 
+            box-sizing: content-box;
+            /* domyślna wartość */
+
+            /* box-sizing: padding-box; */
+            /* box-sizing: border-box; */
+
         }
 
         .item2 {
             background-color: royalblue;
             box-sizing: border-box;
+            /* ma 200px jak w div RAZEM z borderem i paddingiem! ujmuje contentowi!  */
+            /* zaleta jest taka, że nie zaburza układu strony! */
         }
     </style>
 </head>
 
 <body>
-    <div class="item1">Lorem, ipsum dolor sit amet consectetur adipisicing eli quae obcaecati eum unde, architecto ipsa sunt.</div>
+    <div class="item1">Lorem, ipsum dolor sit amet consectetur adipisicing eli quae obcaecati eum unde, architecto ipsa sunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores odio, ea id adipisci consectetur est deserunt quaerat porro fugiat voluptate. Dicta, exercitationem. Repellat, commodi. Impedit voluptatum pariatur, quibusdam eius atque iusto nobis libero ipsam? Cupiditate, porro quos! Quasi voluptates, recusandae veniam deserunt dolore enim officia odio assumenda similique modi labore molestias. Nulla quia porro, ratione laboriosam vitae laborum fugit tenetur? Ipsa excepturi expedita ut ratione nesciunt minus mollitia animi odit dolorem id, adipisci voluptate repudiandae voluptatibus quo quos nisi consequatur vero. Non rerum reprehenderit ducimus rem, cum similique consectetur in tempore qui culpa vel nesciunt esse laudantium perspiciatis, nihil commodi inventore earum odit sed. Minima voluptates doloremque ipsum sit quidem facere perferendis nulla ab laborum assumenda tempora, magnam illo distinctio facilis! Quasi necessitatibus ipsam perferendis sequi impedit, exercitationem modi ratione minus, voluptates dolore excepturi cum reprehenderit quibusdam nesciunt aut facere pariatur odit, debitis consequatur voluptate. Dignissimos corrupti quis officiis perferendis nihil eum, accusamus dicta laboriosam quaerat sed aperiam vero natus pariatur totam voluptatum, iste nam? Recusandae nobis culpa ipsam consequuntur exercitationem veritatis sunt numquam quae tenetur natus aliquam quas nam illo, voluptatem, velit sit quasi non molestias deleniti odit. Sunt aliquid aliquam aspernatur dolores maxime eaque magni ex consequuntur vero.</div>
     <div class="item2"></div>
 
 </body>
