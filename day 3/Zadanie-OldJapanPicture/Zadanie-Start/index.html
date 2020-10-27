@@ -1,0 +1,105 @@
+<!-- 
+    Układ 16:9
+    Ma być podobny (nie pixel w pixel)
+    Ma być responsywny (dostosowoywać się do wysokości przeglądarki)
+
+    ZŁOTE ZASADY
+    - Zrób tak jak potrafisz i tyle ile potrafisz
+    - Próbuj/testuj/sprawdzaj co by było. Takie próbowanie to najważniejsze cechy programisty
+    - Nie przeskakuj ćwiczenia. 
+ -->
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>A dream about old Japan</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --imgWidth: 80vh;
+        }
+
+
+        .picture {
+            position: relative;
+            width: var(--imgWidth);
+            height: calc(var(--imgWidth) / 1.777777);
+            background-size: 100%;
+            margin: 25vh auto 0 auto;
+            overflow: hidden;
+        }
+
+        img {
+            position: absolute;
+            height: 100%;
+        }
+
+        ._1 {
+            z-index: 6;
+            top: 10%;
+        }
+
+        ._2 {
+            z-index: 7;
+            top: 27%;
+        }
+
+        ._3 {
+            z-index: 8;
+            top: 40%;
+        }
+
+        ._4 {
+            z-index: 9;
+            top: 35%;
+        }
+
+        ._5 {
+            z-index: 10;
+            top: 45%;
+        }
+
+        ._6 {
+            z-index: 11;
+            top: 70%;
+        }
+
+        ._7 { 
+            z-index: 12;
+            width: calc(var(--imgWidth) / 10);
+            height: auto;
+            left: 8%;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="picture">
+        <!-- img[src=img/japan$.png]*11 -->
+        <img class='_1' src="img/japan1.png" alt="">
+        <img class='_2' src="img/japan2.png" alt="">
+        <img class='_3' src="img/japan3.png" alt="">
+        <img class='_4' src="img/japan4.png" alt="">
+        <img class='_5' src="img/japan5.png" alt="">
+        <img class='_6' src="img/japan6.png" alt="">
+        <img class='_7' src="img/japan7.png" alt="">
+        <img class='_8' src="img/japan8.png" alt="">
+        <img class='_9' src="img/japan9.png" alt="">
+        <img class='_10' src="img/japan10.png" alt="">
+        <img class='_11' src="img/japan11.png" alt="">
+
+    </div>
+</body>
+
+</html>
