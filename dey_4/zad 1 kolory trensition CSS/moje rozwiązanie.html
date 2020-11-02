@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Zadanie 1 - zmiana koloru po najechaniu</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div p {
+            display: none;
+            transition: .5s;
+        }
+
+        div {
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            border: 4px solid white;
+            border-radius: 50%;
+        }
+        
+        div.bg {
+            position: absolute;
+            height: 100vh;
+            width: 100vw;
+            background-color: #888;
+            border: 0;
+            border-radius: 0;
+            transition: 0.5s;
+        }
+
+        div.red {
+            background-color: red;
+            top: 30px;
+            left: 30px;
+            z-index: 1;
+        }
+
+        div.red:hover ~ div.bg {
+            background-color: red;
+        }
+
+        div.red:hover ~ div p.red {
+            display: block;
+            color: white;
+            text-align: center;
+            line-height: 100vh;
+            font-size: 30px;
+            text-transform: uppercase;
+        }
+
+        div.green {
+            background-color: green;
+            top: 30px;
+            right: 30px;
+            z-index: 1;
+        }
+
+        div.green:hover ~ div.bg {
+            background-color: green;
+        }
+
+        div.green:hover ~ div p.green {
+            display: block;
+            color: white;
+            text-align: center;
+            line-height: 100vh;
+            font-size: 30px;
+            text-transform: uppercase;
+        }
+
+        div.blue {
+            background-color: blue;
+            bottom: 30px;
+            left: 30px;
+            z-index: 1;
+        }
+
+        div.blue:hover ~ div.bg {
+            background-color: blue;
+        }
+
+        div.blue:hover ~ div p.blue {
+            display: block;
+            color: white;
+            text-align: center;
+            line-height: 100vh;
+            font-size: 30px;
+            text-transform: uppercase;
+        }
+
+        div.orange {
+            background-color: orange;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1;
+        }
+
+        div.orange:hover ~ div.bg {
+            background-color: orange;
+        }
+
+        div.orange:hover ~ div p.orange {
+            display: block;
+            color: white;
+            text-align: center;
+            line-height: 100vh;
+            font-size: 30px;
+            text-transform: uppercase;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="red circle"></div>
+    <div class="green circle"></div>
+    <div class="blue circle"></div>
+    <div class="orange circle"></div>
+    <div class="bg">
+        <p class="red">Czerwony</p>
+        <p class="green">Zielony</p>
+        <p class="blue">Niebieski</p>
+        <p class="orange">Pomarańczowy</p>
+    </div>
+</body>
+
+</html>
