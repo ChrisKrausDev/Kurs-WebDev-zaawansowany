@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu moje</title>
+    <script src="https://kit.fontawesome.com/3bfcf54e03.js" crossorigin="anonymous"></script>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .wrap {
+            width: 100vw;
+            height: 40vw;
+            /* background-color: #aaf; */
+        }
+
+        .menu {
+            /* background-color: #ddd; */
+            float: left;
+            width: 40%;
+            height: 100%;
+        }
+
+        header {
+            float: left;
+            background-image: url(pianino.jpg);
+            background-size: 80%;
+            background-repeat: no-repeat;
+            background-position-x: center;
+            /* margin: 20px; */
+            width: 60%;
+            height: 90%;
+        }
+
+        nav.menu {
+            /* display: inline-block; */
+            font-size: 30px;
+            font-family: arial;
+            color: #444;
+            line-height: 2;
+        }
+
+        nav.menu ul li a {
+            color: #444;
+            padding-left: 20px; 
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        nav.menu ul li a i {
+            color: #444;
+            border-right : 3px solid #444;
+            padding-right: 30px; 
+        }
+
+        section {
+            background-color: grey;
+            color: white;
+            font-family: arial;
+            text-transform: uppercase;
+            padding: 30px 0;
+            font-size: 40px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="wrap clearfix">
+        <nav class="menu">
+            <ul>
+                <li>
+                    <a href="#"><i class="far fa-play-circle"></i>start</a>
+                </li>
+
+                <li>
+                    <a href="#"><i class="fas fa-shopping-cart"></i>oferta</a>
+                </li>
+
+                <li>
+                    <a href="#"><i class="fas fa-rss"></i>blog</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-calendar-week"></i>terminarz</a>
+                </li>
+                <li>
+                    <a href="#"><i class="far fa-envelope"></i>kontakt</a>
+                </li>
+            </ul>
+        </nav>
+        <header></header>
+    </div>
+    <section>
+        <h1>Witaj w naszym świecie!</h1>
+    </section>
+</body>
+
+</html>
