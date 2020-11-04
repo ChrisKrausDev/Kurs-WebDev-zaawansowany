@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Domek</title>
+    <style>
+
+        span {
+            display: inline-block;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            padding: 10px 30px;
+            background-color: darkred;
+            color: white;
+            font-weight: bold;
+            font-family: arial;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        div {
+            position: absolute;
+        }
+
+        .komin {
+            width: 0;
+            height: 0;
+            background-color: grey;
+            top: 100vh;
+            left: 0;
+        }
+
+        .dach {
+            width: 0;
+            height: 0;
+            background-color: black;
+            transform: translate(-50%, -50%);
+            top: 100vh;
+            left: 0;
+            transition: .5s;
+        }
+
+        .ściany {
+            width: 0;
+            height: 0;
+            background-color: darkred;
+            top: 100vh;
+            left: 0;
+            transform: translate(-50%, -50%);
+            transition: .5s;
+        }  
+
+        .okno1, .okno2 {
+            width: 0;
+            height: 0;
+            top: 100vh;
+            background-color: yellow;
+        }
+
+        .okno1 {
+            left: 0;
+            transition: 1s;
+        }
+
+        .okno2 {
+            left: 0;
+            transition: 1.2s;
+        }
+
+        .drzwi {
+            width: 0;
+            height: 0;
+            background-color: grey;
+            top: 100vh;
+            left: 0;
+            transition: 1.5s;
+        }
+
+/* ******************************************** */
+
+        span:hover + .komin {
+            display: block;
+            width: 30px;
+            height: 80px;
+            background-color: grey;
+            top: 20vh;
+            left: 62vw;
+        }
+
+        span:hover ~ .dach {
+            width: 400px;
+            height: 400px;
+            background-color: black;
+            transform: translate(-50%, -50%) rotate(45deg);
+            top: 40vh;
+            left: 50vw;
+        }
+
+        span:hover ~ .ściany {
+            width: 550px;
+            height: 400px;
+            background-color: darkred;
+            top: 62vh;
+            left: 50vw;
+            transform: translate(-50%, -50%);
+        }
+
+        span:hover ~ .okno1,
+        span:hover ~ .okno2 {
+            width: 150px;
+            height: 150px;
+            top: 45vh;
+            background-color: yellow;
+        }
+
+        span:hover ~ .okno1 {
+            left: 30vw;
+        }
+
+        span:hover ~ .okno2 {
+            left: 55vw;
+        }
+
+        span:hover ~ .drzwi {
+            width: 100px;
+            height: 150px;
+            background-color: grey;
+            top: 67vh;
+            left: 45vw;
+        }
+        
+        
+    </style>
+
+</head>
+
+<body>
+    <span>BUDUJEMY</span>
+    <div class="komin"></div>
+    <div class="dach"></div>
+    <div class="ściany"></div>
+    <div class="okno1"></div>
+    <div class="okno2"></div>
+    <div class="drzwi"></div>
+</body>
+
+</html>
