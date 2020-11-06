@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body {
+            background-color: #444;
+
+            animation: sky 5s linear infinite;
+            /* animation sky deklarujemy w tym miejscu, ma się pojawić raz i trwać 5 sekund, funkcja czasowa linear */
+        }
+
+        .sun {
+            position: fixed;
+            bottom: 10%;
+            left: 10%;
+            width: 15vw;
+            height: 15vw;
+            background-color: darkred;
+            border-radius: 50%;
+
+            animation: sun 5s linear infinite;
+        }
+
+        .grass {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 30vh;
+            background-color: #222;
+
+            animation: grass 5s linear;
+        }
+
+        /* za pomocą @keyframes poniżej mówimy przeglądarce, że będzie animacja o nazwie sky */
+
+        @keyframes sky {
+            /* from {}
+            to {} */
+
+            /* może deklarować początek animacji i koniec za pomocą from to albo procentami jak poniżej*/
+
+            /* 0% {
+                background-color: #444;
+            } */
+
+            /* 0% i 100% nie trzeba definiować, zostanie wzięta z .body */
+
+            30% {
+                background-color: rgb(112, 94, 97);
+            }
+
+            50% {
+                background-color: lightblue;
+            }
+
+            70% {
+                background-color: rgb(112, 94, 97);
+            }
+
+            100% {
+                background-color: #444;
+            }
+
+            /* stany przejściowe, zostanie to wyanimowane płynnie jak przy transition */
+        }
+
+        @keyframes grass {
+            0% {
+                background-color: #444;
+            }
+
+            20% {
+                background-color: green;
+            } 
+
+            50% {
+                background-color: greenyellow;
+            }    
+
+            80% {
+                background-color: green;
+            }         
+
+            100% {
+                background-color: #222;
+            }  
+        }
+
+        @keyframes sun {
+            0% {
+                left: 15%;
+                bottom: 10%;    
+                background-color: darkred;
+            }
+
+            50% {
+                bottom: 45%;
+                background-color: yellow;    
+            }
+
+            100% {
+                left: 90%;
+                bottom: 15%;    
+                background-color: darkred;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sun"></div>
+    <div class="grass"></div>
+</body>
+
+</html>
