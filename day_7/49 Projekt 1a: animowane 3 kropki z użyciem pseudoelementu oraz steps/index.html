@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Document</title>
+ <style>
+  p {
+   position: absolute;
+   font-size: 80px;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   overflow: hidden;
+
+    /* najlepiej to dodać, by "przykrywka" nie wychodziła poza element niszcząć układ */
+
+  }
+
+  span {
+      position: relative;
+  }
+
+  span::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: white;
+      /* rysujemy nad spanem w pseudoelemencie prostokąt, który będzie odkrywał po kolei kropki, prostokąt w kolorze tła co da efekt pojawiania się kropek */
+
+      animation: dots 2s steps(4, start) infinite;
+
+      /* zmiana na steps 4 po dodaniu jeszcze jednej kropki do spana - problem z zakrywaniem jedenj kropki */
+
+      /* 
+      
+      steps(3, end) - bez ostatniego kroku
+      
+      steps(3, start) - bez pierwszego kroku
+
+      ogólnie dzięki steps animacja przeskakuje - nie jest płynna
+       */
+  }
+
+  @keyframes dots {
+      100% {
+          left: 100%;
+      }
+  }
+ </style>
+</head>
+
+<body>
+ <p>Napis<span> . . . .</span></p>
+
+<!-- rozwiązanie problemu ze steps, end - dodanie jednej kropki, która będzie zakryta, co da efekt trzech kropek -->
+
+</body>
+
+</html>

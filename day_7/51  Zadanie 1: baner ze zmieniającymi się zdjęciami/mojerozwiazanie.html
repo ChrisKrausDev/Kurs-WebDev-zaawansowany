@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        img:nth-last-of-type(1) {
+            animation: 6s banner linear infinite;
+        }
+
+        @keyframes banner {
+            0% {
+                opacity: 0
+            }
+
+            40% {
+                opacity: 0
+            }
+
+            50% {
+                opacity: 1
+            }
+
+            90% {
+                opacity: 1
+            }
+
+            100% {
+                opacity: 0
+            }
+        }
+
+        /* 
+        drugi obrazek:
+
+        0   niewidoczny
+        1   niewidoczny
+        2   niewidoczny
+        3   niewidoczny
+        4   rozpoczęcie przejścia
+        5   widoczny
+        6   widoczny
+        7   widoczny
+        8   widoczny
+        9   rozpoczęcie przejścia
+        10  niewidoczny
+         */
+    </style>
+</head>
+
+<body>
+    <img src="img1.jpg" alt="">
+    <img src="img2.jpg" alt="">
+</body>
+
+</html>
