@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            animation: move 5s infinite linear, color 5s infinite linear alternate;
+
+            /* alternate pozwala wykonać kolejną animację w drugą stronę!  */
+
+            /* reverse - wykonuje całą za każdym razem od tyłu */
+
+            /*  
+            animation-name: move;
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+            animation-timing-function: linear;
+            animation-direction: alternate
+            
+            */            
+        }
+
+        @keyframes move {
+            /* o% to domyślnie margin-left: 0; jak w div */
+
+            /* 0% {
+                margin-left: 0;
+            }
+
+            30% {
+                margin-left: calc(100% - 200px);
+            }
+
+            50% {
+                margin-left: calc(100% - 200px);
+            }
+
+            80% {
+                margin-left: 0;
+            } */
+
+            100% {
+                margin-left: calc(100% - 200px);
+            }
+
+            /* 100% to margin-left: 0; jak w div */
+        }
+
+        @keyframes color {
+            10% {background-color: green;}
+            50% {background-color: red;}
+            80% {background-color: blue;}
+            100% {background-color: yellow;}
+        }
+
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
