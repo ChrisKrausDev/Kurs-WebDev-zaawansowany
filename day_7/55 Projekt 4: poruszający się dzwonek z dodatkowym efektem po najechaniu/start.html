@@ -10,6 +10,45 @@
   crossorigin="anonymous">
 
  <style>
+
+     .bell {
+         position: fixed;
+         bottom: 50px;
+         right: 50px;
+         width: 80px;
+         height: 80px;
+         border-radius: 50%;
+         border: 6px solid cadetblue;
+         font-size: 50px;
+         color: cadetblue;
+         text-align: center;
+         line-height: 80px;
+         cursor: pointer;
+         transition: .2s;
+     }
+
+     .bell i {
+         animation: rotate .3s linear infinite alternate;
+         /* bez alternate źle wyświetla */
+
+         transform-origin: 50% 0;
+         /* punkt, wokół którego wykonuje sie animacja, domyślnie x 50% y 50%, zmieniamy y na 0 czyli sama góra ikonki */
+         transition: .2s;
+     }
+
+     .bell:hover {
+         background-color: cadetblue;
+     }
+
+     .bell:hover i {
+         color: white;
+         animation-duration: .1s;
+     }
+
+     @keyframes rotate {
+         0% {transform: rotate(25deg)}
+         100% {transform: rotate(-25deg)}
+     }
  </style>
 </head>
 

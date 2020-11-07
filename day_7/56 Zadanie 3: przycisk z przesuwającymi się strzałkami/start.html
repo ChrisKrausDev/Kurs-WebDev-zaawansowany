@@ -10,6 +10,40 @@
   crossorigin="anonymous">
 
  <style>
+
+    .arrow {
+        position: relative;
+        width: 70px;
+        height: 70px;
+        top: 90vh;
+        left: calc(50% - 45px);
+        border-radius: 50%;
+        background-color: rgb(93, 50, 141);
+        border: none;
+        overflow: hidden;
+        transition: .2s;
+    }
+
+
+    .arrow i {
+        position: absolute;
+        top: -50px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 70px;
+        color: white;
+        text-shadow: 0 -20px white, 0 -40px white;
+        animation: move 1s linear infinite; 
+    }
+
+    button:hover i {
+        animation-duration: .5s;
+    }
+
+    @keyframes move {
+        100% {top: calc(100% + 50px)}
+    }
+
  </style>
 </head>
 
