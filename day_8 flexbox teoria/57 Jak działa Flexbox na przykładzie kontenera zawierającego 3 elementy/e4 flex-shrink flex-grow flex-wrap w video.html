@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Examples 4 cd</title>
+ <style>
+  section {
+   display: flex;
+   /* domyślne */
+   /* flex-direction: row; */
+   /* align-items: stretch; */
+   /* justify-content: flex-start; */
+   /* align-content: stretch; */
+   /* flex-wrap: wrap; */
+   background-color: #ddd;
+   width: 300px;
+   margin: 100px auto;
+   font-family: sans-serif;
+   color: white;
+   font-size: 80px;
+   height: 400px;
+
+  }
+
+  div {
+   width: 50px;
+   /* flex-basis: 100px; */
+   /* nadpisuje width! */
+
+   flex-shrink: 1;
+   /* wartość domyślna, jeżeli nie ma wolnego miejsca to zagospodaruj miejsce po równo dla każdego elementu. 
+   
+   Jeśli div ma mieć 50% szer rodzica, rodzic ma 300px są 3 divy to każdy musiałby mieć po 150px, a przy shrink: 1 mają po 100px bo 300px / 3 jest 100. Dzieli pomiędzy elementy istniejącą przestrzeń  */ 
+
+   flex-shrink: 0;
+   /* rozwala układ, elementy mają tyle ile zadaliśmy w width czyli po 150px. Zwiększają rodzica */
+
+   flex-grow: 1;
+   /* działa w drugą stronę, jeśli element jest mały, jest wolna przestrzeń to tym poleceniem każemy elementeom zapełnić całą wolną przestrzeń, nawet jesli są mniejsze */
+  }
+
+  .f1 {
+   background-color: darkcyan;
+  }
+
+  .f2 {
+   background-color: darkred;
+  }
+
+  .f3 {
+   background-color: darkolivegreen
+  }
+ </style>
+</head>
+
+<body>
+ <section>
+  <div class="f1">1</div>
+  <div class="f2">2</div>
+  <div class="f3">3</div>
+ </section>
+</body>
+
+</html>

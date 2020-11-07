@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Examples 3 - Kluczowe właściwości kontenera i flex we flexie</title>
+ <style>
+  section {
+   display: flex;
+   height: 400px;
+   /* domyślne */
+   /* Kierunek osi głównej - kluczowa sprawa */
+   /* Wolna przestrzeń - zarządzie  */
+   flex-direction: row;
+   align-items: stretch;
+
+  
+    /* wyśrodkowanie elementów: */
+  
+  
+   /* align-items: center;  */
+   /* są na końcu osi głównej - oś główna zależy od flex-direction: row pionowa, column pozioma */
+
+   justify-content: center;
+
+
+
+
+   /* justify-content: space-between; */
+   /* równe odstępy między elementami */
+
+   /* justify-content: space-around; */
+   /* wolna przestrzeń pomiędzy elementami */
+
+   /* justify-content: flex-start; */
+   /* od góry wzdłóż osi głównej */
+
+   justify-content: flex-end;
+
+   /* align-content: stretch; */
+
+   /* flex-wrap: wrap; */
+   /* elementy przechodzą do nowej lini, alternatywnie nowrap */
+
+   background-color: #ddd;
+   width: 80%;
+   margin: 100px auto;
+   font-family: sans-serif;
+   color: white;
+   font-size: 80px;
+  }
+
+  div {
+   display: flex;
+   /* justify-content: center; */
+   /* align-items: center; */
+   flex-basis: 150px;
+  }
+
+  .f1 {
+   background-color: darkcyan;
+   /* width ma mniejszą ważność niż flex-basis, ale flex-basis zależy od kierunku (flex-direction), więc czasami jest szerokością (row) a czasami wysokością (column) */
+   /* width: 400px; */
+   /* height: 100px; */
+   /* overflow: hidden; */
+  }
+
+  .f2 {
+   background-color: darkred;
+  }
+
+  .f3 {
+   background-color: darkolivegreen
+  }
+ </style>
+</head>
+
+<body>
+ <section>
+     <!-- section jest contenerem dla dzieci, jesli stworzymy spana w divie on już nie będzie flex, musimy wtedy w divie zrobić display: flex -->
+  <div class="f1">1</div>
+  <div class="f2">2</div>
+  <div class="f3">3</div>
+ </section>
+</body>
+
+</html>
