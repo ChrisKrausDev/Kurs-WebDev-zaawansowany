@@ -25,6 +25,10 @@
    --animationTime: 5s;
   }
 
+  body {
+    overflow: hidden;
+  }
+
   .table,
   .ball,
   .paddle,
@@ -36,7 +40,6 @@
    width: var(--tableWidth);
    height: var(--tableHeight);
    background-color: var(--tableColor);
-   position: absolute;
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
@@ -101,26 +104,83 @@
    /* left: 75px - lewa */
    /* left: 605px - prawa */
    /* top: 0 - góra */
-   /* top: 380px - góra */
-   /* left: 340px - środek */
+   /* top: 380px - y dół stołu */
+   /* left: 340px - x środek stołu  */
    /* do pokonania 530px (między rakietkami) na 40% czyli 13px na 1% - prędkość piłki*/
-   /* 0% {
-        top: calc(50% - var(--ballSize)/2);
-        left: calc(50% - var(--ballSize)/2);
-      } */
-   20% {
+
+   15% {
     top: 340px;
-    /* left: calc(var(--tableWidth) - var(--paddleFromEdge) - var(--paddleWidth) - var(--ballSize)); */
     left: 605px;
    }
 
+   25.53% {
+     top: 380px;
+     left: 455px;
+   }
+
+   52.76% {
+     top: 150px;
+     left: 75px;
+   }
+
+   78% {
+     top: 0;
+     left: 500px;
+   }
+
+   100% {
+     top: 30px;
+     left: 730px;
+   }
   }
 
-  @keyframes playerPaddle {}
+  @keyframes playerPaddle {
+    15% {
+    top: calc(280px - 40px);
+   }
 
-  @keyframes aiPaddle {}
+   25.53% {
+     top: calc(380px - 60px);
+   }
 
-  @keyframes showResult {}
+   52.76% {
+     top: calc(150px - 40px);
+   }
+
+   78% {
+     top: calc(0 + 40px);
+   }
+
+   100% {
+     top: 30px;
+   }
+  }
+
+  @keyframes aiPaddle {
+    15% {
+    top: calc(320px - 40px);
+   }
+
+   30% {
+     top: calc(380px - 60px);
+   }
+
+   60% {
+     top: calc(200px - 40px);
+   }
+
+   90% {
+     top: calc(50 + 40px);
+   }
+
+   100% {
+     top: 30px;
+   }
+  }
+
+  @keyframes showResult {
+    100% {transform: scale(1.5)}
+  }
  </style>
 </head>
 
