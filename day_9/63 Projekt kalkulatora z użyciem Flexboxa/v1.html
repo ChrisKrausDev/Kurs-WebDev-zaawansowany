@@ -2,75 +2,92 @@
 <html lang="en">
 
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <meta http-equiv="X-UA-Compatible" content="ie=edge">
- <title>Kalkulator</title>
- <style>
-  * {
-   margin: 0;
-   padding: 0;
-  }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kalkulator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
 
-  body {
-   box-sizing: border-box;
-   display: flex;
-   flex-direction: column;
-   height: 100vh;
-   /* border: 5px solid black; */
-   padding: 100px;
-  }
+        body {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            border: 5px solid black;
+            padding: 100px;
+        }
 
-  .result {
-   flex-basis: 15%;
-   background-color: #ddd;
-  }
+        .result {
+            flex-basis: 20%;
+            background-color: #ddd;
+        }
 
-  .panel {
-   flex-grow: 1;
-   background-color: cadetblue;
-  }
+        .panel {
+            flex-grow: 1;
+            background-color: cadetblue;
+            flex-wrap: nowrap;
+            /* flex-wrap tak jest domyślnie, divy nie przechodza do nowej linii, pomimo nadania im szerokości 30% rodzica - pozostają w jednej linii */
 
-  .panel {
-   display: flex;
-   flex-wrap: wrap;
-  }
+            flex-wrap: wrap;
+            /* teraz mogę przechodzić do nowej linii */
+        }
 
-  .panel div {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-grow: 1;
-   flex-basis: 30%;
-   border: 3px solid white;
-   font-family: arial;
-   font-size: 50px;
-   box-sizing: border-box;
-  }
- </style>
+        .panel {
+            display: flex;
+        }
+
+        .panel div {
+            display: flex;
+            justify-content: center;
+            /* wyrównanie w pionie */
+
+
+            align-items: center;
+            /* wyrównanie w poziomie */
+
+            flex-basis: 30%;
+            /* mają 30% ale nie mogą przejść do nowej linii. By to zmienić należy dopisać flex-wrap: wrap dla .panel */
+
+            border: 3px solid white;
+            flex-grow: 0;
+            /* tak jest domyślnie, nie pozwala elementom rosnąć, zostaje wolna przestrzeń po prawej stronie */
+
+            flex-grow: 1;
+            /* teraz wolna przestrzen zagospodarowana jest po równo, elementy wypełniają całą linie, są podzielone po równo */
+
+            font-size: 50px;
+            font-family: arial;
+        }
+    </style>
 </head>
 
 <body>
- <div class="result"></div>
- <div class="panel">
-  <div>1</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
-  <div>6</div>
-  <div>7</div>
-  <div>8</div>
-  <div>9</div>
-  <div>+</div>
-  <div>0</div>
-  <div>-</div>
-  <div>/</div>
-  <div>.</div>
-  <div>*</div>
-  <div>C</div>
-  <div>=</div>
- </div>
+    <div class="result">
+
+    </div>
+    <div class="panel">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>+</div>
+        <div>0</div>
+        <div>-</div>
+        <div>/</div>
+        <div>.</div>
+        <div>*</div>
+        <div>C</div>
+        <div>=</div>
+    </div>
 </body>
 
 </html>

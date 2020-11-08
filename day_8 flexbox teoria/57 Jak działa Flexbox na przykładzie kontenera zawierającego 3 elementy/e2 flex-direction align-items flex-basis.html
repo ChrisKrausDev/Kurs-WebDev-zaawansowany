@@ -23,7 +23,7 @@
    display: flex;
    height: 400px;
    
-   flex-direction: row;
+   flex-direction: column;
    /* domyślne */
    /* flex-direction: column;
    flex-direction: row-reverse;
@@ -34,7 +34,7 @@
    align-items: stretch;
    /* domyślnie stretch prostopadły do osi głównej - rozciąga wszystkie elementy */
 
-   /* align-items: flex-start; */
+   align-items:baseline;
    /* bez rozciągania elementów, mają tyle ile content, chyba że określono inaczej */
    background-color: #ddd;
    width: 80%;
@@ -42,13 +42,20 @@
    font-family: sans-serif;
    color: white;
    font-size: 80px;
+
+   flex-wrap: wrap;
+
+  }
+
+  div {
+      width: 25%;
   }
 
   .f1 {
    background-color: darkcyan;
    /* width: 200px; */
    height: auto;
-   flex-basis: 600px; /* zwiększa długość elementu względem osi głównej: row - wysokość, column - szerokość */
+   /* flex-basis: 600px; zwiększa długość elementu względem osi głównej: row - wysokość, column - szerokość */
 
    /* właściwość kontrolująca wielkość elementu
    
