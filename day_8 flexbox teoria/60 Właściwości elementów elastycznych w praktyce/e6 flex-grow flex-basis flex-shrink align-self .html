@@ -9,9 +9,10 @@
  <style>
   section {
    display: flex;
+   flex-direction: row;
    flex-direction: column;
    align-items: center;
-   /* width: 600px; */
+   width: 600px;
    height: 400px;
    margin: 100px auto;
    font-size: 80px;
@@ -30,32 +31,45 @@
   .f1 {
    flex-basis: 200px;
    /* width: 1500px; */
-   order: 3;
-   /* Gdy order jest taki sam decyduje kolejność z html */
-   /* flex-grow: 1; */
+
+   /* order: 0; */
+   /* domyślnie zero - gdy order jest taki sam decyduje kolejność z html */
+
+   /* order: 2; */
+
+   /* jako pierwszy wyświetlany jest element z najniższym orderem */
+
+   /* flex-grow: 3; */
    /* Elementy z flex-grow: 0 nie rozszerzają sie na wolną przestrzeń */
+
+
    /* flex-shrink: 2; */
    /* Elementy zmniejszą się tak by nie wykraczać poza wielkość kontenera */
    /* flex-basis: auto; */
    /* auto - tyle ile zostało wskazane we własciwości width/height lub jeśli nie zostało to tyle ile ma wysokości/szerokości dany element */
+
+
    align-self: stretch;
    /* auto - to samo co align-items */
+   /* właściwości pojedyńczego elementu */
+
+
    background-color: darkcyan;
    text-align: center;
    /* flex-basis wielkość (od flex-direction zależy czy to szerokość czy wysokość) */
   }
 
   .f2 {
-   order: 3;
+   /* order: 3; */
    background-color: darkred;
    /* flex-shrink: 3; */
-   /* flex-grow: 0; */
+   /* flex-grow: 1; */
   }
 
   .f3 {
-   order: 3;
+   /* order: -1; */
    background-color: darkolivegreen;
-   /* flex-grow: 2; */
+   /* flex-grow: 0; */
   }
  </style>
 </head>
