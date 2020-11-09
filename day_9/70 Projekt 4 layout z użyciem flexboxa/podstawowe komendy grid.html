@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <title>CSS Grid Layout z gosciem</title>
+ <style>
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        display: grid;
+        /* grid-template-columns: 200px 200px 1fr; */
+        /* 1fr- frakcja, weź całą wolną przestrzeń - komenda dla trzeciej kolumny */
+
+        min-height: 100vh;
+        /* deklarując wysokość strony, można dzielić wiersze na frakcje */
+
+        grid-template-columns: 1fr 1fr 1fr;
+        /* dzieli obszar na trzy frakcje, każda kolumna ma po 33 proc */
+
+        grid-template-columns: 2fr 1fr 1fr;
+
+        grid-template-rows: 100px 500px;
+        /* określenie wysokości wierszy - tylko gdy element ma okresloną wysokość! min-height */
+
+        grid-template-rows: 1fr 5fr;
+        /* pierwszy wiersz ma 1 część, drugi 5 części */
+
+        grid-template-rows: 1fr 200px;
+        /* drugi wiersz określony na 200px, pierwszy zabiera całą wolną przestrzeń */
+
+        color: white;
+        font-size: 40px;
+        font-family: arial;
+    }
+
+    header {
+        background-color: olivedrab;
+    }
+
+    nav {
+        background-color: darkorange;
+
+    }
+
+    main {
+        background-color: darkred;
+        color: white;
+
+    }
+
+    aside {
+        background-color: cadetblue;
+
+    }
+
+    footer {
+        background-color: violet;
+
+    }
+
+
+
+
+
+ </style>
+</head>
+
+<body>
+
+ <header>Header</header>
+ <nav>Nav</nav>
+ <main>Main</main>
+ <aside>Aside</aside>
+ <footer>Stopka</footer>
+
+
+</body>
+
+</html>

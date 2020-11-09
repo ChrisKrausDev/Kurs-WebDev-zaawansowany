@@ -10,62 +10,78 @@
   * {
    margin: 0;
    padding: 0;
-
+   list-style: none;
   }
 
   ul {
-   list-style: none;
-   display: flex;
-   flex-direction: column;
+      display: flex;
+      /* flex-direction: row; */
+      /* domyślna wartość */
+
+      flex-direction: column;
+      /* zaczynając projekt od mobile */
   }
 
   li {
-   flex-basis: 25%;
-   /* flex-shrink: 1; */
-   /* flex-grow: 0; */
+    flex-basis: 100%;
+    flex-basis: 25%;
+    /* nadajemy szerokość elementom li, dla row jest to szerokość dla osi x */
+    flex-shrink: 1;
+    /* domyślna wartość, dzięki f-s: 1;  elementy nie rozszerzają się poza ekran - bez znaczenie czy damy im f-b na 100% czy 25%*/
+
+    flex-basis: 15%;
+    flex-grow: 1;
+    /* domyślnie f-g: 0; */
+
+    /* te komendy zmniejszają najpierw elementy do 15% następnie flex-grow: 1; pozwala elementom zająć całą wolną przestrzeń - efekt jak powyżej */
   }
 
   a {
-   display: block;
-   background-color: #444;
-   font-size: 22px;
-   text-align: center;
-   color: white;
-   font-family: 'open sans', sans-serif;
-   text-decoration: none;
-   padding: 20px;
+      /* a nie jest elementem flex, domyślnie jest liniowy */
+      
+      display: block;
+      /* w tym momencie cały przycisk jest już responsywny, rączka pojawia się nad całym elementem */
 
-
+      text-align: center;
+      font-size: 22px;
+      color: white;
+      background-color: #444;
+      font-family: arial;
+      text-decoration: none;
+      padding: 20px;
+      /* margin: 15px; */
   }
 
-  a:hover {
-   background-color: #000;
-  }
-
-  @media (min-width: 1025px) {
-   ul {
-    flex-direction: row;
+   a:hover {
+       background-color: black;
    }
 
-   a {
-    margin: 15px;
-    /* padding: 50px 0; */
+   @media (min-width: 1025px) {
+       ul {
+           flex-direction: row;
+       }
+
+       a {
+           margin: 15px;
+           /* padding: 50px 0; */
+       }
    }
 
-  }
  </style>
 </head>
 
 <body>
+ <!-- nav>ul>li*5>a[href=#]{Przycisk $} -->
  <nav>
-  <ul>
-   <li><a href="#">przycisk 1</a></li>
-   <li><a href="#">przycisk 2</a></li>
-   <li><a href="#">przycisk 3</a></li>
-   <li><a href="#">przycisk 4</a></li>
-   <li><a href="#">przycisk 5</a></li>
-  </ul>
+     <ul>
+         <li><a href="#">Przycisk 1</a></li>
+         <li><a href="#">Przycisk 2</a></li>
+         <li><a href="#">Przycisk 3</a></li>
+         <li><a href="#">Przycisk 4</a></li>
+         <li><a href="#">Przycisk 5</a></li>
+     </ul>
  </nav>
+
 </body>
 
 </html>

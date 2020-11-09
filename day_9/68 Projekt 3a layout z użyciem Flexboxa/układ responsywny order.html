@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: grey;
+            /* max-width: 1000px; */
+             /* border: 4px solid green; */
+            margin: 0 auto;
+            font-family: arial;
+            font-size: 20px;
+            color: white;
+
+
+            align-items: stretch;
+            /* tak są ustawione domyślnie wszystkie lementy, w związku z czym są rozciągnięte na całą szerokość */
+
+            align-items: center;
+            /* teraz są wycentrowane i zajmują tyle ile potrzebują */
+
+        }
+
+        nav {
+            background-color: #000;
+
+            align-self: stretch;
+            /* tylko nav jest rozciągnięty na całą szerokość strony */
+
+            padding: 20px 10px;
+            /* wysokość można uswić paddingami bądź też flex-basis */
+
+            /* flex-basis: 100px; */
+            /* flex-basis dla flex-direction: column dotyczy osi pionowej, bo zawsze dotyczy osi głównej */
+        }
+
+        header {
+            width: 100%;
+            background-color: royalblue;
+            max-width: 1200px;
+            flex-basis: 25vh;
+        }
+
+        section {
+            display: flex;
+            flex-direction: row;
+            flex-grow: 1;
+            /* rośnie na maksymalną wysokość */
+            background-color: darkred;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        main {
+            flex-grow: 1;
+            background-color: darkorange;
+        }
+
+        aside {
+            flex-basis: 30%;
+            min-width: 280px;
+            /* szerokośc bocznej kolumny */
+            background-color: darkslateblue;
+        }
+
+        footer {
+            background-color: black;
+            /* align-self: stretch; */
+            width: 100%;
+            flex-basis: 5vh;
+        }
+
+        @media (max-width: 1024px) {
+            header {
+                order: -1; 
+                /* im niższy order tym wyżej znajduje się element na stronie */
+            }
+
+
+
+            /* pierwszy sposób  */
+
+            /* aside {
+                flex-basis: 100%;
+            }
+
+            section {
+                flex-wrap: wrap;
+            } */
+
+            /* drugi sposób */
+            /* podział 2 części dla maina 1 częśc dla aside */
+
+            section {
+                flex-direction: column;
+            }
+
+            main {
+                flex-grow: 2;
+                /* lub */
+                flex-grow: 1;
+            }
+
+            aside {
+                flex-grow: 1;
+                /* lub */
+                flex-basis: 300px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <nav>Nawigacja</nav>
+    <header>Header</header>
+    <section>
+        <main>Główna treść</main>
+        <aside>Kolumna</aside>
+    </section>
+    <footer>Stopka</footer>
+</body>
+
+</html>
