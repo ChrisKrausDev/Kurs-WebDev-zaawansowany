@@ -11,6 +11,88 @@
  <meta http-equiv="X-UA-Compatible" content="ie=edge">
  <title>Cennik - wieczory panieńskie</title>
  <style>
+
+     * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+         font-family: arial;
+     }
+
+     h1 {
+         text-align: center;
+         margin: 40px auto;
+     }
+
+     section {
+         display: flex;
+         justify-content: space-around;
+         max-width: 1200px;
+         height: 700px;
+         margin: 0 auto;
+         background-color: #eee;
+     }
+
+     div.col {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 25%;
+        align-items: center;
+        justify-content: space-around;
+        background-color: #bbb;
+        
+     }
+
+     section div h2 {
+         margin-top: 50px;
+         flex-grow: 1;
+     }
+
+     section div img {
+         flex-grow: 1;
+         width: 100%;
+         margin-bottom: 40px;
+     }
+
+     p {
+         display: flex;
+         /* align-items: center; */
+     }
+
+     .col:nth-child(1) p {
+         color: red;
+         flex-grow: 3;
+     }
+
+     .col:nth-child(2) p {
+         color: green;
+         flex-grow: 3;
+     }
+
+     /* .col:nth-child(2) p:nth-of-type(2) {
+         color: black;
+         flex-grow: 2;
+     } */
+
+     .col:nth-child(3) p {
+         color: blue;
+         flex-grow: 1;
+     }
+
+     
+     section .col p.price {
+         flex-basis: 20px;
+     }
+     
+     section .col p.price span {
+         display: block;
+         color: black;
+         align-self: center;
+         background-color: white;
+         border: 2px solid black;
+         padding: 10px 20px;
+     }
+
  </style>
 </head>
 
@@ -28,7 +110,7 @@
    <h2>Opcja 2</h2>
    <img src="2.png" alt="">
    <p>Średnio Tanio</p>
-   <p>Wielka pałka w zestawie</p>
+   <!-- <p>Wielka pałka w zestawie</p> -->
    <p class="price"><span>300 dutków</span></p>
   </div>
   <div class="col">
