@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            background-color: white;
+            font-size: 30px;
+        }
+
+        div.text {
+            margin: 30px 0;
+            width: 800px;
+        }
+
+        h4 {
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 0.8rem;
+        }
+
+        span {
+            font-weight: 900;
+        }
+
+
+        body {
+            max-width: 1200px;
+            /* height: 100vh; */
+            background-color: #ddd;
+            margin: 0 auto;
+
+            /* kontener dla section */
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        section {
+            margin: 30px 0;
+            width: 400px;
+            height: 400px;
+            background-color: darkcyan;
+            border: 3px solid black;
+            color: white;
+
+            /* kontener dla divów*/
+
+            display: flex;
+            /* flex-direction: column;
+            align-items: stretch;
+            justify-content: space-around; */
+        }
+
+        div {
+            /* width: 80px; */
+            background-color: greenyellow;
+            border: 2px solid black;
+            color: black;
+        }
+
+        section.jeden {
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+        }
+
+        section.jeden div {
+            /* width: 80px; */
+            background-color: brown;
+
+        }
+
+        section.dwa {
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+
+        section.dwa div {
+            background-color: white;
+            width: 100px;
+            height: 100px;
+        }
+
+        section.trzy {
+            flex-direction: column;
+            justify-content: space-around;
+            /* align-items: space-around; */
+            flex-wrap: wrap;
+            align-content: ;
+        }
+
+        section.trzy div {
+            background-color: green;
+            width: 100px;
+            height: 100px;
+        }
+
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="text">
+        <h4>Section jeden</h4>
+        <p><span>flex-direction:</span> row; column; row-reverse; column-reverse;
+        </p>
+        <p><span>justify-content:</span> flex start; flex-end; center; space-around; space-between;</p>
+        <p><span>align-items</span>: (zachowanie prostopadłe do osi głównej) stretch; flex-start; flex-end; center || sprawdzić zależność wielkości elementu i wielkości rodzica</p>
+    </div>
+
+    <section class='jeden'>
+        <div>
+            <p>1</p>
+        </div>
+        <div>
+            <p>2</p>
+        </div>
+        <div>
+            <p>3</p>
+        </div>
+    </section>
+
+    <div class="text">
+        <h4>section dwa: flex-wrap - przechodzenie do nowej linii</h4>
+        <p><span>flex-wrap:</span> nowrap; wrap</p>
+        <p>-</p>
+        <p>Jeśli się nie mieścisz w linii, zrób sobie kolejną, albo upchaj wszystko. Domyślnie elementy się zmniejszane co wynika z właściwości flex-shrink, domyślnie flex-wrap nie pozwala przejść do następnej linii</p>
+    </div>
+    <section class='dwa'>
+        <div>
+            <p>1</p>
+        </div>
+        <div>
+            <p>2</p>
+        </div>
+        <div>
+            <p>3</p>
+        </div>
+        <div>
+            <p>4</p>
+        </div>
+        <div>
+            <p>5</p>
+        </div>
+        <div>
+            <p>6</p>
+    </section>
+
+    <div class="text">
+        <h4>section trzy: align content - zachowanie między liniami</h4>
+        <p><span>align-content:</span> stretch; center; flex-end; space-around; space-between;</p>
+    </div>
+
+    <section class='trzy'>
+        <div>
+            <p>1</p>
+        </div>
+        <div>
+            <p>2</p>
+        </div>
+        <div>
+            <p>3</p>
+        </div>
+        <div>
+            <p>4</p>
+        </div>
+        <div>
+            <p>5</p>
+        </div>
+        <div>
+            <p>6</p>
+        </div>
+    </section>
+
+</body>
+
+</html>
