@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    display: flex;
+    /* margin: auto auto; */
+    /* wyśrodkowanie względem body */
+    width: 50vw;
+    height: 50vw;
+    /* background-color: tomato; */
+
+    /* kontener */
+    flex-wrap: wrap;
+}
+
+div {
+    /* position: static, układają się pod sobą */
+    /* dopiero po dis flex dla section są flex */
+    width: 20%;
+    flex-basis: 20%;
+    /* flex to basis, jednak jest ważniejsze */
+
+    height: 20%;
+    background-color: black;
+}
+
+div:nth-child(odd) {
+    background-color: white;
+}

@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: relative;
+    height: 400px;
+    background-color: black;
+}
+
+div {
+    position: absolute;
+}
+
+.left {
+    top: 0;
+    left: 0;
+    border-left: 300px solid grey;
+    border-top: 200px solid transparent;
+    border-bottom: 200px solid transparent;
+}
+
+.right {
+    top: 0;
+    right: 0;
+    border-right: 300px solid grey;
+    border-top: 200px solid transparent;
+    border-bottom: 200px solid transparent;
+}
+
+nav {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0; 
+}
+
+a {
+    float: left;
+    width: 25%;
+    line-height: 60px;
+    font-size: 24px;
+    text-align: center;
+    text-decoration: none;
+    background-color: grey;
+}
+
+p {
+    line-height: 2;
+    font-size: 20px;
+}
+
