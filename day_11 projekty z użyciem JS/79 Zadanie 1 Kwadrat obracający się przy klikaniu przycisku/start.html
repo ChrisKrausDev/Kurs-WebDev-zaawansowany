@@ -5,7 +5,7 @@
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <meta http-equiv="X-UA-Compatible" content="ie=edge">
- <title>Powiększ</title>
+ <title>Obróć</title>
  <style>
   button {
    padding: 10px;
@@ -23,6 +23,10 @@
    top: calc(50% - 50px);
    left: calc(50% - 50px);
   }
+
+  .animation {
+      transition: .5s;
+  }
  </style>
 </head>
 
@@ -30,18 +34,7 @@
  <button>Obróc</button>
  <div class="square"></div>
 
- <script>
-  // parametry główne. Za pomocą zmiennych stwórz początkową wartość rotate (zero) i wartość o którą będziesz zmieniał stopnie (o 10 stopnii).
-
-
-  // pobieramy elementy - pobierz przycisk i div
-
-
-  // podpinamy nasłuchiwanie i umeiszczamy w nim funkcje anonimową. Pamiętaj zmieniamy własciwość transform. Za każdym razie obrót zwiększa się od 10 deg. 
-
-
-  //Bonus dodaj właściwość transition dla div określoną na .5s.
- </script>
+ <script src="kwadrat.js"></script>
 </body>
 
 </html>

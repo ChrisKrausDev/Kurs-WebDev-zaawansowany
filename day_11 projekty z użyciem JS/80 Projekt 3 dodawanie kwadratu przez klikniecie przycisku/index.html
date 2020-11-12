@@ -17,6 +17,8 @@
   }
 
   button {
+   width: 200px;
+   height: 150px;
    border: 3px solid black;
    text-transform: uppercase;
    padding: 15px 20px;
@@ -31,28 +33,24 @@
    background-color: cadetblue;
    width: 100px;
    height: 100px;
-   animation: create 0.2s linear both;
-
+   animation: 1s create 1 linear normal both;
   }
 
   @keyframes create {
-   0% {
-    width: 0;
-    height: 0;
-    transform: rotate(0);
-   }
+      0% {
+        width: 0;
+        height: 0;
+        transform: rotate(0);
+      }
 
-   50% {
-    width: 200px;
-    height: 10px;
-   }
-   100% {
-    width: 100px;
-    height: 100px;
-    /* transform: rotate(3600deg); */
-   }
+      100% {
+        width: 100px;
+        height: 100px;
+        transform: rotate(180deg);
 
+      }
   }
+
  </style>
 </head>
 
@@ -61,19 +59,7 @@
  <button class="jq">Dawaj JQ!</button>
  <br>
 
- <script>
-  const buttonJS = document.querySelector('.js');
-
-  function createDiv() {
-   const divItem = document.createElement('div');
-   // divItem.className = "box";
-   divItem.classList.add("box");
-   // divItem.setAttribute("class", "box");
-   // divItem.innerText = "tekst"
-   document.body.appendChild(divItem);
-  }
-  buttonJS.addEventListener("click", createDiv)
- </script>
+<script src="script.js"></script>
 
 
 </body>
