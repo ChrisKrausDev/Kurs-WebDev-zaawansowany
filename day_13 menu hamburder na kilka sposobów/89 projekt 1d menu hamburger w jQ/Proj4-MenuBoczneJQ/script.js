@@ -1,5 +1,5 @@
-$(".burger").on("click", function () {
-    $(".fas, aside").toggleClass("show");
+$('.burger').on('click', function () {
+    $('.fas, aside').toggleClass('show');
 })
 
 

@@ -23,13 +23,12 @@ aside {
 
 .fas {
     display: none;
-    color: gray;
 }
 
-i.show {
+.show {
     display: block;
 }
 
 aside.show {
-    left: 0;
+    left: 0px;
 }
