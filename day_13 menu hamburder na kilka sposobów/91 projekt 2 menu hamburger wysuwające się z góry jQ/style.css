@@ -2,8 +2,9 @@ body {
     min-height: 200vh;
 }
 
-.wrapper {
-    margin: 10px 70px;
+div.wrapper {
+    margin: 10px 100px;
+    text-align: justify;
 }
 
 .wrapper p {
@@ -17,6 +18,8 @@ body {
     right: 30px;
     font-size: 50px;
     z-index: 1;
+    cursor: pointer;
+    transition: .5s;
 }
 
 i.off {
@@ -32,12 +35,15 @@ nav {
     left: 0;
     /* right: 0; */
     width: 100%;
+    /* by miał 100% można zostawić tylko right: 0 */
+
     top: 0;
     height: 30vh;
-    background-color: #000;
-    transition: .2s;
+    background-color: black;
+    transition: .4s;
 }
 
 nav.off {
     top: -300px;
 }
+
