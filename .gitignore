@@ -2,4 +2,5 @@
 .~lock.notes.odt#
 /.vscode
 jquery-3.5.1.min.js
-
+*.jpg
+*.png
