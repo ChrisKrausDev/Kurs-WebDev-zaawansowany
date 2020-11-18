@@ -1,0 +1,31 @@
+header {
+  height: 30vh;
+  background-color: #1d1dff; }
+  header h1 {
+    position: absolute;
+    top: 50%; }
+  header div.small {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: black; }
+  header div.medium {
+    width: 100px;
+    height: 100px;
+    border-radius: 70%;
+    background-color: black; }
+  header div.large {
+    width: 350px;
+    height: 350px;
+    border-radius: 20%;
+    background-color: black; }
+
+nav {
+  height: 30vh; }
+
+ul {
+  color: #1d1dff; }
+
+li {
+  font-size: 30px; }
+/*# sourceMappingURL=style.css.map */

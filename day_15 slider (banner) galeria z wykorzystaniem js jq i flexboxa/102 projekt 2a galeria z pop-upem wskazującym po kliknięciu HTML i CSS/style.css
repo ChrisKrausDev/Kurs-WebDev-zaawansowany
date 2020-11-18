@@ -40,7 +40,7 @@ body {
     bottom: 5%;
     height: 90%;
     width: 60%;
-    background-color: gray;
+    /* background-color: gray; */
 }
 
 .gallery a {
@@ -56,6 +56,9 @@ body {
     position: relative;
     overflow: hidden;
     /* te dwie linie, oraz poniższy zapis w img służą wycentrowaniu grafik w elemencie a */
+
+    box-shadow: 0 0 3px 4px grey;
+    /* przesunięcie na x i y 3px rozmycia, 4px grubości*/
 }
 
 img {
